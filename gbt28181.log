@@ -1,0 +1,420 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+21:39:48.127 [main] [] INFO  StartupInfoLogger.java:50 - Starting Gbt28181Application v0.0.1-SNAPSHOT using Java 21.0.10 with PID 37456 (/Users/yankelei/IdeaProjects/gbt28181/target/gbt28181-0.0.1-SNAPSHOT.jar started by yankelei in /Users/yankelei/IdeaProjects/gbt28181)
+21:39:48.133 [main] [] INFO  SpringApplication.java:654 - No active profile set, falling back to 1 default profile: "default"
+21:39:48.747 [main] [] INFO  RepositoryConfigurationDelegate.java:139 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:39:48.791 [main] [] INFO  RepositoryConfigurationDelegate.java:208 - Finished Spring Data repository scanning in 39 ms. Found 6 JPA repository interfaces.
+21:39:49.166 [main] [] INFO  TomcatWebServer.java:109 - Tomcat initialized with port 8080 (http)
+21:39:49.176 [main] [] INFO  DirectJDKLog.java:173 - Starting service [Tomcat]
+21:39:49.177 [main] [] INFO  DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.19]
+21:39:49.199 [main] [] INFO  DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+21:39:49.199 [main] [] INFO  ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 996 ms
+21:39:49.223 [main] [] INFO  HikariDataSource.java:110 - HikariPool-1 - Starting...
+21:39:49.416 [main] [] INFO  HikariPool.java:565 - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/gbt28181 user=SA
+21:39:49.417 [main] [] INFO  HikariDataSource.java:123 - HikariPool-1 - Start completed.
+21:39:49.425 [main] [] INFO  H2ConsoleAutoConfiguration.java:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/gbt28181'
+21:39:49.509 [main] [] INFO  LogHelper.java:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:39:49.550 [main] [] INFO  Version.java:44 - HHH000412: Hibernate ORM core version 6.4.4.Final
+21:39:49.575 [main] [] INFO  RegionFactoryInitiator.java:50 - HHH000026: Second-level cache disabled
+21:39:49.730 [main] [] INFO  SpringPersistenceUnitInfo.java:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+21:39:50.655 [main] [] INFO  JtaPlatformInitiator.java:58 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+21:39:50.693 [main] [] INFO  AbstractEntityManagerFactoryBean.java:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:39:51.394 [main] [] WARN  JpaBaseConfiguration.java:232 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:39:51.418 [main] [] INFO  WelcomePageHandlerMapping.java:59 - Adding welcome page: class path resource [static/index.html]
+21:39:51.756 [main] [] INFO  TomcatWebServer.java:241 - Tomcat started on port 8080 (http) with context path ''
+21:39:51.778 [main] [] INFO  StartupInfoLogger.java:56 - Started Gbt28181Application in 4.047 seconds (process running for 4.388)
+21:39:51.938 [main] [] INFO  SchemaCompatibilityInitializer.java:38 - 检测到本端设备 PTZ 类型缺失，启动后主动补发 Catalog Query
+21:39:51.938 [main] [] WARN  CatalogQueryService.java:34 - SIP Provider 未就绪，跳过 Catalog Query configId=2
+21:39:52.173 [main] [] INFO  LocalSipConfigInitializer.java:31 - 本端 SIP 配置已存在
+21:39:52.173 [main] [] INFO  LocalSipConfigInitializer.java:35 - 本端 SIP 参数已配置，启动 SIP Stack ...
+21:39:52.173 [main] [] INFO  SipStackManager.java:55 - [1] SIP Stack 开始热重载，新配置: 192.168.10.4:15060/UDP
+21:39:52.199 [main] [] INFO  SipRegistrationClient.java:104 - 所有 SIP Client 注册任务已停止
+21:39:52.228 [main] [] INFO  SipRegistrationServer.java:387 - SipRegistrationServer 已关闭，所有上联状态重置为 OFFLINE
+21:39:52.233 [main] [] INFO  SipRegistrationClient.java:104 - 所有 SIP Client 注册任务已停止
+21:39:52.239 [main] [] INFO  SipStackManager.java:74 - [4] 端口 15060 可用
+21:39:52.267 [main] [] WARN  LogWriter.java:451 - using default tls security policy
+21:39:52.268 [main] [] WARN  LogWriter.java:451 - Using default keystore type pkcs12
+21:39:52.268 [main] [] WARN  LogWriter.java:451 - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=pkcs12 javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+21:39:52.269 [main] [] INFO  LogWriter.java:461 - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+21:39:52.269 [main] [] WARN  LogWriter.java:451 - Using default truststore type pkcs12
+21:39:52.269 [main] [] WARN  LogWriter.java:451 - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=pkcs12 javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+21:39:52.355 [main] [] INFO  SipStackManager.java:166 - [5] SipStack 创建成功：192.168.10.4:15060/UDP
+21:39:52.358 [main] [] INFO  SipStackManager.java:85 - [7] SIP Stack 热重载完成，监听 192.168.10.4:15060/UDP
+21:40:38.991 [EventScannerThread] [] WARN  SipRegistrationServer.java:270 - 收到未注册对端的 MESSAGE: 34020000002000000001
+21:40:43.891 [http-nio-8080-exec-1] [] INFO  DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:40:43.891 [http-nio-8080-exec-1] [] INFO  FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+21:40:43.894 [http-nio-8080-exec-1] [] INFO  FrameworkServlet.java:554 - Completed initialization in 2 ms
+21:40:46.212 [EventScannerThread] [] INFO  SipRegistrationServer.java:200 - IVS1900 34020000002000000001 已注销，upLinkStatus=OFFLINE
+21:40:46.234 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+21:40:46.367 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+21:40:46.369 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=5c267497-04ad-4dad-9333-b75acfa78c93
+21:40:46.369 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+21:40:46.408 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+21:40:46.408 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+21:40:46.413 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+21:40:46.419 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+21:40:46.419 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+21:40:46.423 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+21:40:57.915 [http-nio-8080-exec-5] [] INFO  ZLMediaKitClient.java:53 - ZLM openRtpServer 成功 streamId=playback_64010400001320000003 port=31536
+21:40:58.076 [http-nio-8080-exec-5] [] INFO  SipPlaybackService.java:117 - 回放会话建立成功 deviceId=64010400001320000003 streamId=playback_64010400001320000003 rtpPort=31536
+21:41:28.325 [http-nio-8080-exec-7] [] INFO  ZLMediaKitClient.java:53 - ZLM openRtpServer 成功 streamId=playback_64010400001320000001 port=34850
+21:41:28.480 [http-nio-8080-exec-7] [] INFO  SipPlaybackService.java:117 - 回放会话建立成功 deviceId=64010400001320000001 streamId=playback_64010400001320000001 rtpPort=34850
+21:45:40.247 [http-nio-8080-exec-7] [] INFO  SipPlaybackService.java:73 - 设备 64010400001320000003 已有活跃回放会话，先停止旧会话
+21:45:40.256 [http-nio-8080-exec-7] [] INFO  ZLMediaKitClient.java:78 - ZLM closeRtpServer 成功 streamId=playback_64010400001320000003
+21:45:40.256 [http-nio-8080-exec-7] [] INFO  SipPlaybackService.java:153 - 回放会话已停止 deviceId=64010400001320000003
+21:45:40.258 [http-nio-8080-exec-7] [] INFO  ZLMediaKitClient.java:53 - ZLM openRtpServer 成功 streamId=playback_64010400001320000003 port=32310
+21:45:40.323 [http-nio-8080-exec-7] [] INFO  SipPlaybackService.java:117 - 回放会话建立成功 deviceId=64010400001320000003 streamId=playback_64010400001320000003 rtpPort=32310
+22:22:46.273 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+22:22:46.276 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+22:22:46.276 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=6212945d-cf11-4586-903c-a2a6136679a4
+22:22:46.277 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+22:22:46.298 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+22:22:46.298 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+22:22:46.301 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+22:22:46.306 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+22:22:46.306 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+22:22:46.309 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+23:04:46.279 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+23:04:46.291 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+23:04:46.292 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=a8f7daa0-ac1a-4bf3-9712-aee1d3e28de1
+23:04:46.292 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+23:04:46.311 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+23:04:46.311 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+23:04:46.313 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+23:04:46.317 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+23:04:46.318 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+23:04:46.320 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+23:46:46.370 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+23:46:46.373 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+23:46:46.374 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=2200ad26-c2df-447b-afb4-4bbe1bf8379d
+23:46:46.374 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+23:46:46.395 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+23:46:46.396 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+23:46:46.402 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+23:46:46.408 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+23:46:46.408 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+23:46:46.410 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+00:28:46.477 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+00:28:46.481 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+00:28:46.482 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=607e60fe-5f96-4093-92b1-f88d5b9330ad
+00:28:46.482 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+00:28:46.502 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+00:28:46.506 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+00:28:46.508 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+00:28:46.511 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+00:28:46.511 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+00:28:46.513 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+01:10:46.466 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+01:10:46.468 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+01:10:46.469 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=62aa8229-5e63-45f6-a363-646b59b4cfbf
+01:10:46.469 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+01:10:46.490 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+01:10:46.490 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+01:10:46.492 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+01:10:46.494 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+01:10:46.494 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+01:10:46.496 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+01:52:46.553 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+01:52:46.556 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+01:52:46.557 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=be9ad64f-8788-448b-b876-475051a0234d
+01:52:46.557 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+01:52:46.577 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+01:52:46.578 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+01:52:46.580 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+01:52:46.583 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+01:52:46.583 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+01:52:46.584 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+02:34:46.610 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+02:34:46.613 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+02:34:46.613 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=5c56903a-bb85-4f61-9008-7d0b1512a1d3
+02:34:46.613 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+02:34:46.640 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+02:34:46.640 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+02:34:46.643 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+02:34:46.646 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+02:34:46.646 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+02:34:46.649 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+03:16:46.644 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+03:16:46.647 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+03:16:46.647 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=1306651d-7ce3-46db-bf19-68762a5bfdbd
+03:16:46.647 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+03:16:46.668 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+03:16:46.668 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+03:16:46.670 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+03:16:46.673 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+03:16:46.673 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+03:16:46.674 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+03:58:46.690 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+03:58:46.692 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+03:58:46.693 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=7689e33d-1211-4e62-969d-ac10af9e7baf
+03:58:46.693 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+03:58:46.712 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+03:58:46.712 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+03:58:46.713 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+03:58:46.716 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+03:58:46.716 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+03:58:46.717 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+04:08:57.750 [EventScannerThread] [] WARN  SipRegistrationServer.java:278 - MESSAGE 不是 Keepalive，忽略: remoteSipId=34020000002000000001
+04:40:46.733 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+04:40:46.735 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+04:40:46.736 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=5dbd9d4d-e2c2-4374-8143-b4da459de517
+04:40:46.736 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+04:40:46.758 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+04:40:46.758 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+04:40:46.761 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+04:40:46.767 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+04:40:46.767 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+04:40:46.769 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+05:22:46.793 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+05:22:46.796 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+05:22:46.797 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=3a8cc61d-0e5c-430f-9f40-bb9c9bbb54ff
+05:22:46.797 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+05:22:46.817 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+05:22:46.818 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+05:22:46.820 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+05:22:46.823 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+05:22:46.823 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+05:22:46.825 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+06:04:46.779 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+06:04:46.782 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+06:04:46.783 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=019d4889-3aae-461d-85b2-24330833b823
+06:04:46.783 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+06:04:46.801 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+06:04:46.801 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+06:04:46.803 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+06:04:46.806 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+06:04:46.806 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+06:04:46.808 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+06:46:46.786 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+06:46:46.789 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+06:46:46.789 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=251fd34e-e61a-49d6-b666-29d44eb6272a
+06:46:46.790 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+06:46:46.809 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+06:46:46.809 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+06:46:46.811 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+06:46:46.814 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+06:46:46.814 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+06:46:46.815 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+07:28:46.862 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+07:28:46.866 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+07:28:46.867 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=06dfe794-2a93-4d6a-a50e-ada779a3f6a3
+07:28:46.867 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+07:28:46.886 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+07:28:46.886 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+07:28:46.888 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+07:28:46.890 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+07:28:46.890 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+07:28:46.892 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+08:07:04.414 [EventScannerThread] [] WARN  SipRegistrationServer.java:278 - MESSAGE 不是 Keepalive，忽略: remoteSipId=34020000002000000001
+08:10:46.956 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+08:10:46.960 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+08:10:46.960 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=4c9d5f54-4500-4000-bfc9-e3c95945a417
+08:10:46.960 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+08:10:46.981 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+08:10:46.982 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+08:10:46.986 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+08:10:46.994 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+08:10:46.994 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+08:10:46.996 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+08:52:46.999 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+08:52:47.002 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+08:52:47.002 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=bcbd9dca-a4a1-47d5-a016-13af1aae6ca9
+08:52:47.002 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+08:52:47.022 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+08:52:47.022 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+08:52:47.024 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+08:52:47.026 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+08:52:47.026 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+08:52:47.027 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+09:34:47.087 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+09:34:47.090 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+09:34:47.091 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=c8628fc0-ebf6-4241-928e-be09f6512633
+09:34:47.091 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+09:34:47.111 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+09:34:47.111 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+09:34:47.113 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+09:34:47.115 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+09:34:47.115 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+09:34:47.116 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+10:16:47.102 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+10:16:47.105 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+10:16:47.106 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=031029a2-77d8-40bc-ab93-dac0007075a7
+10:16:47.106 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+10:16:47.125 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+10:16:47.125 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+10:16:47.127 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+10:16:47.132 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+10:16:47.132 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+10:16:47.134 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+10:58:47.104 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+10:58:47.107 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+10:58:47.107 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=92428a96-05ef-4ff6-81b9-3dd13534751e
+10:58:47.107 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+10:58:47.127 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+10:58:47.127 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+10:58:47.129 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+10:58:47.131 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+10:58:47.131 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+10:58:47.132 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+11:40:47.206 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+11:40:47.209 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+11:40:47.209 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=5c8d4952-4707-4f2c-9dc1-016f6f61038f
+11:40:47.210 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+11:40:47.227 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+11:40:47.227 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+11:40:47.228 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+11:40:47.230 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+11:40:47.230 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+11:40:47.232 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+12:22:47.167 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+12:22:47.173 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+12:22:47.173 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=5707511e-dc37-4652-ba1b-997060f2beb0
+12:22:47.173 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+12:22:47.193 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+12:22:47.193 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+12:22:47.194 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+12:22:47.196 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+12:22:47.196 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+12:22:47.197 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+13:04:47.230 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+13:04:47.233 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+13:04:47.233 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=72f94ca1-d6a7-4cfe-b619-5d40aadbb229
+13:04:47.233 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+13:04:47.253 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+13:04:47.253 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+13:04:47.255 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+13:04:47.258 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+13:04:47.258 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+13:04:47.259 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+13:46:47.310 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+13:46:47.314 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+13:46:47.314 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=5e43424c-fb26-4138-a389-f5fee82d6889
+13:46:47.314 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+13:46:47.332 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+13:46:47.332 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+13:46:47.333 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+13:46:47.335 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+13:46:47.335 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+13:46:47.336 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+14:28:47.465 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+14:28:47.468 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+14:28:47.468 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=4b148d19-6ffa-46a8-b15f-2aa1c6e8e2b5
+14:28:47.469 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+14:28:47.491 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+14:28:47.492 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+14:28:47.493 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+14:28:47.496 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+14:28:47.496 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+14:28:47.498 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+15:10:47.508 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+15:10:47.511 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+15:10:47.512 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=31fa2656-b937-4615-aa7a-b4cd3866b0ba
+15:10:47.512 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+15:10:47.529 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+15:10:47.529 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+15:10:47.530 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+15:10:47.532 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=ON gbDeviceId=64010400001320000003
+15:10:47.532 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+15:10:47.533 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+15:28:59.372 [EventScannerThread] [] DEBUG CatalogNotifyHandler.java:52 - NOTIFY 创建 ServerTransaction 失败（可能缺少 Subscription-State），降级为无状态响应: Missing a required header : Subscription-State
+15:28:59.388 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=OFF gbDeviceId=64010400001320000003
+15:28:59.388 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+15:28:59.388 [EventScannerThread] [] DEBUG CatalogNotifyHandler.java:52 - NOTIFY 创建 ServerTransaction 失败（可能缺少 Subscription-State），降级为无状态响应: Missing a required header : Subscription-State
+15:28:59.389 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+15:29:02.167 [EventScannerThread] [] DEBUG CatalogNotifyHandler.java:52 - NOTIFY 创建 ServerTransaction 失败（可能缺少 Subscription-State），降级为无状态响应: Missing a required header : Subscription-State
+15:29:02.179 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=OFF gbDeviceId=64010400001320000003
+15:29:02.179 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+15:29:02.180 [EventScannerThread] [] DEBUG CatalogNotifyHandler.java:52 - NOTIFY 创建 ServerTransaction 失败（可能缺少 Subscription-State），降级为无状态响应: Missing a required header : Subscription-State
+15:29:02.182 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+15:34:02.169 [EventScannerThread] [] DEBUG CatalogNotifyHandler.java:52 - NOTIFY 创建 ServerTransaction 失败（可能缺少 Subscription-State），降级为无状态响应: Missing a required header : Subscription-State
+15:34:02.180 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+15:34:02.181 [EventScannerThread] [] DEBUG CatalogNotifyHandler.java:52 - NOTIFY 创建 ServerTransaction 失败（可能缺少 Subscription-State），降级为无状态响应: Missing a required header : Subscription-State
+15:34:02.188 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=OFF gbDeviceId=64010400001320000003
+15:34:02.188 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+15:52:47.556 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+15:52:47.558 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+15:52:47.559 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=fafdb94d-15fd-4651-b231-b007b68bb73f
+15:52:47.559 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+15:52:47.578 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+15:52:47.578 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+15:52:47.580 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+15:52:47.582 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=OFF gbDeviceId=64010400001320000003
+15:52:47.582 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+15:52:47.584 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+16:34:47.590 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+16:34:47.593 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+16:34:47.594 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=fe2c5a0a-7fd9-4329-b40f-92bac2273c5a
+16:34:47.594 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+16:34:47.621 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+16:34:47.621 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+16:34:47.623 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+16:34:47.625 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=OFF gbDeviceId=64010400001320000003
+16:34:47.625 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+16:34:47.627 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+17:16:47.580 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+17:16:47.583 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+17:16:47.583 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=8fcf2b05-5613-4e71-92c8-5934d884a014
+17:16:47.583 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+17:16:47.604 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+17:16:47.604 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+17:16:47.609 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+17:16:47.612 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=OFF gbDeviceId=64010400001320000003
+17:16:47.612 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+17:16:47.614 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+17:58:47.623 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+17:58:47.627 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+17:58:47.628 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=f978bb13-3bda-409e-a875-4ba69baf1630
+17:58:47.628 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+17:58:47.647 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+17:58:47.647 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+17:58:47.649 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+17:58:47.652 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=OFF gbDeviceId=64010400001320000003
+17:58:47.652 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+17:58:47.653 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+18:40:47.758 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+18:40:47.761 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+18:40:47.762 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=e4bffe5b-dbe3-4877-84a3-e071c076835b
+18:40:47.762 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+18:40:47.781 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+18:40:47.781 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+18:40:47.785 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+18:40:47.788 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=OFF gbDeviceId=64010400001320000003
+18:40:47.788 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+18:40:47.791 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+19:22:47.827 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+19:22:47.830 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+19:22:47.830 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=b6564fd4-8941-4b36-8283-30b91aa2d168
+19:22:47.830 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+19:22:47.849 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+19:22:47.849 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+19:22:47.851 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+19:22:47.852 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=OFF gbDeviceId=64010400001320000003
+19:22:47.852 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+19:22:47.855 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+20:04:47.813 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+20:04:47.816 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+20:04:47.816 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=7f558754-edc9-4bcc-a1fb-669f3d911086
+20:04:47.816 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+20:04:47.835 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+20:04:47.835 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+20:04:47.836 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+20:04:47.838 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=OFF gbDeviceId=64010400001320000003
+20:04:47.838 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+20:04:47.839 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+20:46:47.856 [EventScannerThread] [] INFO  SipRegistrationServer.java:214 - IVS1900 34020000002000000001 注册成功，upLinkStatus=ONLINE，expires=3600s
+20:46:47.859 [EventScannerThread] [] INFO  CatalogQueryService.java:52 - 发送 Catalog Query → 192.168.10.9:5061 configId=2
+20:46:47.860 [EventScannerThread] [] INFO  SipMessageSender.java:163 - 发送 Catalog SUBSCRIBE → 192.168.10.9:5061 expires=3600 callId=cb431259-6960-4899-8169-ce5fea981284
+20:46:47.860 [EventScannerThread] [] INFO  CatalogSubscribeService.java:87 - Catalog SUBSCRIBE 已发起 configId=2 isIvs1900=true target=192.168.10.9:5061
+20:46:47.883 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000001 status=ON gbDeviceId=64010400001320000001
+20:46:47.883 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+20:46:47.885 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0
+20:46:47.888 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:180 - IVS1900 更新相机: deviceId=34020000001310000002 status=OFF gbDeviceId=64010400001320000003
+20:46:47.888 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=1
+20:46:47.889 [EventScannerThread] [] INFO  CatalogNotifyHandler.java:183 - IVS1900 Catalog Notify 同步完成：新增=0, 更新=0

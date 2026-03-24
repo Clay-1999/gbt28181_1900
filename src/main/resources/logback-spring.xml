@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 继承 Spring Boot 默认配置 -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+    <include resource="org/springframework/boot/logging/logback/file-appender.xml"/>
+
+    <!-- ===== SIP 消息追踪专用 Appender ===== -->
+    <appender name="SIP_TRACE_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/sip-trace.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/sip-trace.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{callId:-}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- sip.trace logger：只写专用文件，不传播到根 logger -->
+    <logger name="sip.trace" level="INFO" additivity="false">
+        <appender-ref ref="SIP_TRACE_FILE"/>
+    </logger>
+
+    <!-- 根 logger 沿用 application.yml 的配置 -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>

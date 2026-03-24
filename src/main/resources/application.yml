@@ -1,0 +1,50 @@
+spring:
+  application:
+    name: gbt28181
+  datasource:
+    url: jdbc:h2:file:./data/gbt28181
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8080
+
+app:
+  # 生产环境通过环境变量 APP_SECRET_KEY 注入，必须为 16 位字符
+  secret-key: ${APP_SECRET_KEY:gbt28181-secret}
+
+sip:
+  default-port: 5060
+  default-transport: UDP
+
+zlm:
+  base-url: ${ZLM_BASE_URL:http://127.0.0.1:18080}
+  rtp-ip: ${ZLM_RTP_IP:192.168.10.4}
+  http-port: ${ZLM_HTTP_PORT:18080}
+  secret: ${ZLM_SECRET:cHEOg2J4hhW2EKYAR0UTubPaKEjdnExM}
+
+logging:
+  level:
+    com.example.gbt28181: INFO
+    com.example.gbt28181.sip.CatalogNotifyHandler: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] [%X{callId:-}] %-5level %file:%line - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%X{callId:-}] %-5level %file:%line - %msg%n"
+  file:
+    name: logs/gbt28181.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 7

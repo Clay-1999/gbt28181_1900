@@ -1,0 +1,424 @@
+openapi: 3.0.1
+info:
+  title: IVS1800 RESTFul
+  description: IVS1800 老的用户管理接口
+  version: v1
+servers:
+  - url: https://localhost.com/
+tags:
+  - name: 用户管理
+  - name: 安全问题管理
+  - name: 登录管理
+paths:
+  /loginInfo/login/v1.0:
+    post:
+      tags:
+        - 登录管理
+      summary: 登录接口
+      description: 登录系统接口。在调用其他接口时，需要结合登录接口生成的SessionID，否则无法建立会话、无法完成鉴权
+      operationId: login
+      x-api-distribute: open
+      x-api-domain: System
+      x-api-scope: 1800
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/loginbody'
+        required: true
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/resp'
+  /users/logout:
+    get:
+      tags:
+        - 登录管理
+      summary: 登出
+      description: 用户登出
+      operationId: logout
+      x-api-distribute: open
+      x-api-domain: System
+      x-api-scope: 1800
+      parameters:
+        - name: Cookie
+          in: header
+          required: true
+          description: 请求头，必须带JSESSIONID的头信息，用户标识用户
+          schema:
+            type: string
+            minLength: 44
+            maxLength: 80
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/resp'
+  /common/keepAlive:
+    get:
+      tags:
+        - 登录管理
+      summary: 保活
+      description: 保活
+      operationId: keepAlive
+      x-api-distribute: open
+      x-api-domain: System
+      x-api-scope: 1800
+      parameters:
+        - name: Cookie
+          in: header
+          required: true
+          description: 请求头，必须带JSESSIONID的头信息，用户标识用户
+          schema:
+            type: string
+            minLength: 44
+            maxLength: 80
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/resp'
+components:
+  schemas:
+    ModifySelfPassword:
+      type: object
+      properties:
+        oldPassword:
+          type: string
+          description: 旧密码
+          pattern: "^[A-Za-z0-9-`=\\\\[\\];',./~!@#$%^&*()_+|{}:\"<>?]*$"
+          minLength: 8
+          maxLength: 16
+          example: XXX
+        newPassword:
+          type: string
+          description: 新密码,新密码与旧密码，有重复性相关校验
+          pattern: "^[A-Za-z0-9-`=\\\\[\\];',./~!@#$%^&*()_+|{}:\"<>?]*$"
+          minLength: 8
+          maxLength: 16
+          example: XXX
+      description: 修改自己密码的body体
+    ResetPasswordBody:
+      type: object
+      description: 修改账户密码
+      properties:
+        userName:
+          type: string
+          description: 用户名
+          pattern: '^[a-zA-z0-9_]{5,20}$'
+          minLength: 5
+          maxLength: 20
+          example: admin
+        password:
+          type: string
+          description: 新密码
+          pattern: "^[A-Za-z0-9-`=\\\\[\\];',./~!@#$%^&*()_+|{}:\"<>?]*$"
+          minLength: 8
+          maxLength: 16
+          example: XXX
+    loginbody:
+      required:
+        - password
+        - userName
+      type: object
+      properties:
+        userName:
+          type: string
+          description: NVR系统登录账号,长度范围 6 - 20， 除了admin，其它账号长度都大于等于6
+          pattern: '^[a-zA-z0-9_]{5,20}$'
+          minLength: 5
+          maxLength: 20
+          example: admin
+        password:
+          type: string
+          description: NVR系统登录密码, 大小写字母，数字，特殊字符至少有两种
+          pattern: "^[A-Za-z0-9-`=\\\\[\\];',./~!@#$%^&*()_+|{}:\"<>?]*$"
+          minLength: 8
+          maxLength: 16
+          example: XXX
+      description: NVR系统登录账号信息
+    UserIdResp:
+      type: object
+      description: 用户id查询响应
+      properties:
+        resultCode:
+          type: integer
+          description: 响应码
+          example: 0
+        userId:
+          type: integer
+          description: 用户id
+          example: 1
+    UserPwdExpiredInfo:
+      type: object
+      description: 用户密码过期信息
+      properties:
+        isNeedWarning:
+          type: integer
+          description: 手否需要告警
+          example: 0
+        remainDays:
+          type: integer
+          description: 还剩多久
+          example: 30
+        expiredDays:
+          type: integer
+          description: 超期时间
+          example: 0
+    UserPwdExpiredInfoResp:
+      type: object
+      description: 用户密码过期信息响应
+      properties:
+        restltCode:
+          type: integer
+          example: 0
+          description: 响应码
+        userPwdExpiredInfo:
+          $ref: '#/components/schemas/UserPwdExpiredInfo'
+    OldUserInfo:
+      type: object
+      properties:
+        domainCode:
+          type: string
+          example: dc451bcc70ff4ed1a23e2ea56f166082
+          description: 域编码
+        groupId:
+          type: integer
+          example: 1
+          description: 组id
+        isFirstLogin:
+          type: integer
+          example: 0
+          description: '0: 不是首次登录， 1： 首次登录'
+          enum:
+            - 0
+            - 1
+        lockTime:
+          type: string
+          example: 2024-01-01 10-20-20
+          description: 锁定时间
+        loginName:
+          type: string
+          example: admin01
+          minLength: 5
+          maxLength: 20
+          description: 登录名
+        mail:
+          type: string
+          example: xxx@xxx.com
+          maxLength: 127
+          description: 邮箱
+        phone:
+          type: string
+          example: xxx
+          maxLength: 127
+          description: 手机号
+        maxSessionCount:
+          type: integer
+          example: 5
+          minimum: 1
+          maximum: 30
+          description: 最大登录数
+        maxVideoCount:
+          type: integer
+          example: 128
+          description: 最大视频数
+        ptzLevel:
+          type: integer
+          example: 1
+          description: PTZ操作优先级
+        pwdModifyDate:
+          type: string
+          example: 2024-01-01 10-20-20
+          maxLength: 19
+          description: 密码修改时间
+        registerDate:
+          type: string
+          example: 2024-01-01 10-20-20
+          maxLength: 19
+          description: 注册时间
+        reverse:
+          type: string
+          example: ''
+          maxLength: 32
+          description: 保留字段
+        roleId:
+          type: integer
+          example: 1
+          description: 角色id
+        permission:
+          type: string
+          example: '010101010101'
+          description: '当前用户的权限'
+        sex:
+          type: integer
+          example: 1
+          description: 性别
+        status:
+          type: integer
+          example: 1
+          enum:
+            - 1
+            - 2
+            - 3
+          description: '1: 激活 2： 停用 3： 锁定'
+        userDesc:
+          type: string
+          example: ''
+          maxLength: 128
+          description: 用户描述
+        userDomain:
+          type: string
+          example: ''
+          description: 用户域
+        userId:
+          type: integer
+          example: 1
+          description: 用户id
+        userName:
+          type: string
+          example: admin
+          description: 用户名
+        userType:
+          type: integer
+          example: 1
+          description: 用户类型
+        validDateFlag:
+          type: integer
+          example: 1
+          description: 有效期标志
+        validDateStart:
+          type: string
+          example: 2024-01-01 10-20-20
+          description: 有效期开始时间
+        validDateEnd:
+          type: string
+          example: 2024-01-01 10-20-20
+          description: 有效期结束时间
+    OldUserInfoResp:
+      type: object
+      properties:
+        resultCode:
+          type: integer
+          example: 0
+          description: 错误码
+        userInfo:
+          $ref: '#/components/schemas/OldUserInfo'
+    PortalInfo:
+      type: object
+      properties:
+        ip:
+          type: string
+          description: 北向ip
+          example: xx.xx.xx.xx
+        port:
+          type: integer
+          description: 端口
+          example: 8443
+    OmuTokenResp:
+      type: object
+      properties:
+        resultCode:
+          type: integer
+          example: 0
+          description: 错误码
+        token:
+          type: string
+          example: _8Penm923edYVg5_5Ct2t-XkG1GBiDrf
+          description: token
+        portalInfo:
+          $ref: '#/components/schemas/PortalInfo'
+    QrCodeRsp:
+      type: object
+      properties:
+        resultCode:
+          type: integer
+          example: 0
+          description: 错误码
+        qrCodeStr:
+          type: string
+          example: ''
+          description: 二维码
+        phoneNo:
+          type: string
+          example: xxx
+          description: 手机号
+    AuthentiCode:
+      type: object
+      properties:
+        authentiCode:
+          type: string
+          example: _8Penm923edYVg5_5Ct2t-XkG1GBiDrf
+          minLength: 32
+          maxLength: 32
+          pattern: '^[_\-0-9a-zA-Z]{32}$'
+          description: 认证码,由手机扫描二维码后，获取到的值
+    AuthentiCodeResp:
+      type: object
+      properties:
+        token:
+          type: string
+          example: _8Penm923edYVg5_5Ct2t-XkG1GBiDrf
+          minLength: 32
+          maxLength: 32
+          pattern: '^[_\-0-9a-zA-Z]{32}$'
+          description: token
+        lockTimeRemain:
+          type: integer
+          example: 0
+          description: 锁定剩余时间
+        resultCode:
+          type: integer
+          example: 0
+          description: 错误码
+    modifyUserPwdRsp:
+      type: object
+      properties:
+        resultCode:
+          type: integer
+          description: 返回状态码：0成功；其余返回错误码
+          format: int32
+          example: 0
+        reasonCode:
+          type: integer
+          description: 返回状态码：0成功；其余返回错误码
+          format: int32
+          example: 0
+    resp:
+      type: object
+      properties:
+        resultCode:
+          type: integer
+          description: 返回状态码：0成功；其余返回错误码
+          format: int32
+          example: 0
+    loginWithTokenBody:
+      required:
+        - token
+      type: object
+      properties:
+        token:
+          type: string
+          minLength: 32
+          maxLength: 32
+          description: 通过NSS消息获取到的认证Token
+          example: _8Penm923edYVg5_5Ct2t-XkG1GBiDr
+    passwordResetRsp:
+      description: 重置密码接口响应
+      properties:
+        resultCode:
+          type: integer
+          description: 返回状态码：0成功；其余返回错误码
+          format: int32
+          example: 0
+        resultMsg:
+          type: string
+          description: 错误描述
+          example: ""
